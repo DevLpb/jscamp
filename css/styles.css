@@ -19,6 +19,7 @@
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
+  --button-apply: #4caf58; 
   --border: rgba(255, 255, 255, 0.1);
   --card-bg: #1e293b;
   --shadow: rgba(0, 0, 0, 0.3);
@@ -227,7 +228,8 @@ form input[type="text"]::placeholder {
   .search-filters {
   display: flex;
   background-color: transparent;
-  box-shadow: none;;
+  box-shadow: none;
+  padding: 0;
   }
   select {
     background-color: var(--primary);
@@ -361,6 +363,7 @@ footer {
       margin-bottom: 0;
       box-shadow: none;
       border-radius: 0;
+      background: transparent;
       &:not(:last-child) {
         border-bottom: solid var(--primary);
     }
@@ -393,4 +396,12 @@ article {
     font-weight: 500;
   }
 }
+}
+
+.button-apply-job {
+  background: var(--primary-light);
+  &.is-applied {
+    background: var(--button-apply);
+    pointer-events: none;
+  }
 }
